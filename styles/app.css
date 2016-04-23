@@ -5,6 +5,18 @@ h1, h2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+md-toolbar .md-button.md-fab.md-fab-bottom-right {
+  bottom: -30px;
+}
+.md-content-over {
+  margin-top: -80px;
+  z-index:1;
+  position:relative
+}
+.md-toolbar-under {
+  z-index:0;
+  padding-bottom: 180px;
+}
 .md-toolbar-header {
   background-image:url('../img/toolbar.png');
   background-size: cover;
