@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('RadioActive')
+angular.module('Paper')
 .component('footer', {
   controller: function($scope) {
 

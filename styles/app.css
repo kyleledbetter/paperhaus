@@ -44,10 +44,22 @@ md-toolbar .md-button.md-fab.md-fab-bottom-right {
   height: 32px;
   width: 32px;
 }
-.md-icon-lg {
-  height: 200px;
-  width: 200px;
-  max-height: 200px !important;
+@media (max-width: 480px) {
+  .md-header-title {
+    font-size: 1rem;
+  }
+  .md-icon-lg {
+    height: 80px;
+    width: 80px;
+    max-height: 80px !important;
+  }
+}
+@media (min-width: 481px) {
+  .md-icon-lg {
+    height: 100px;
+    width: 100px;
+    max-height: 100px !important;
+  }
 }
 [ng-click]:hover,
 [ui-sref]:hover {
@@ -269,7 +281,9 @@ md-dialog {
   bottom: 0;
   left: 0;
 }
-
+md-dialog.md-dialog-theme {
+  border-radius: 0;
+}
 md-datepicker[class*="theme"] {
   background: none;
 }

@@ -54,7 +54,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     },
     {
       title: 'Membership',
-      state: 'users',
+      state: 'membership',
       icon: 'editor:ic_insert_photo_24px',
     },
   ];
@@ -65,6 +65,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     {
       title: 'Forum App Template',
       desc: 'The idea is to create an app that the marketers can use by extending the customer influencer index model that calculates customers influence based on relations',
+      icon: 'communication:ic_forum',
       rows: 2,
       columns: 2,
       background: 'bgc-purple-700',
@@ -73,6 +74,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     {
       title: 'Finance App Template',
       desc: 'The idea is to create an app that the marketers can use by extending the customer influencer',
+      icon: 'editor:ic_monetization_on',
       rows: 1,
       columns: 1,
       background: 'bgc-green-800',
@@ -81,6 +83,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     {
       title: 'Chat App Template',
       desc: 'The idea is to create an app that the marketers can use by extending the customer influencer index model that calculates customers influence based on relations',
+      icon: 'communication:ic_chat',
       rows: 1,
       columns: 1,
       background: 'bgc-deep-purple-700',
@@ -89,6 +92,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     {
       title: 'Events App Template',
       desc: 'The idea is to create an app that the marketers can use by extending the customer influencer index model that calculates customers influence based on relations',
+      icon: 'notification:ic_event_note',
       rows: 2,
       columns: 2,
       background: 'bgc-teal-600',
@@ -97,6 +101,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     {
       title: 'Stock Market App Template',
       desc: 'The idea is to create an app that the marketers can use by extending the customer influencer index model that calculates customers influence based on relations',
+      icon: 'editor:ic_insert_chart',
       rows: 1,
       columns: 1,
       background: 'bgc-blue-grey-700',
@@ -105,6 +110,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     {
       title: 'Contact Directory App Template',
       desc: 'The idea is to create an app that the marketers can use by extending the customer influencer index model that calculates customers influence based on relations',
+      icon: 'communication:ic_contacts',
       rows: 1,
       columns: 1,
       background: 'bgc-deep-orange-A200',
@@ -269,25 +275,10 @@ app.config(function($urlRouterProvider, $stateProvider) {
       url: '/template',
       title: 'Material Design App Template'
     })
-    .state('users', {
-      templateUrl: 'views/users/users.html',
-      url: '/users',
-      title: 'Users'
-    })
-    .state('user', {
-      templateUrl: 'views/user/user.html',
-      url: '/user',
-      title: 'User'
-    })
-    .state('user-create', {
-      templateUrl: 'views/user/form.html',
-      url: '/user/create',
-      title: 'Create User'
-    })
-    .state('settings', {
-      templateUrl: 'views/settings/settings.html',
-      url: '/settings',
-      title: 'Settings'
+    .state('membership', {
+      templateUrl: 'views/membership/membership.html',
+      url: '/membership',
+      title: 'Membership'
     });
 });
 

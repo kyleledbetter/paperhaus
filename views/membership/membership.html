@@ -1,0 +1,54 @@
+<div layout-gt-xs="row" layout-align-gt-xs="center center">
+  <div flex-gt-xs="50">
+    <div hide-xs class="md-padding"></div>
+    <md-card>
+      <pricing></pricing>
+    </md-card>
+    <md-card>
+      <md-card-header>
+        <md-card-header-text>
+          <span class="md-headline">Included in your Membership</span>
+        </md-card-header-text>
+      </md-card-header>
+      <md-divider></md-divider>
+      <md-list>
+        <md-list-item class="md-2-line">
+          <md-icon md-svg-src="img/icons/angular-logo.svg"></md-icon>
+          <div class="md-list-item-text" layout="column">
+            <h3>Angular-Material</h3>
+            <p>AngularJS ng-material HTML Views &amp; Interactions</p>
+          </div>
+          <md-divider md-inset></md-divider>
+        </md-list-item>
+        <md-list-item class="md-2-line">
+          <md-icon  md-svg-src="img/icons/sketch-logo2.svg"></md-icon>
+          <div class="md-list-item-text" layout="column">
+            <h3>Sketch for OSX</h3>
+            <p>Sketch(app) design templates, completely editable</p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-card>
+    <md-card>
+      <md-subheader class="md-no-sticky md-transparent">Templates Included (One new per month)</md-subheader>
+
+      <md-list>
+        <md-list-item ng-repeat="item in tiles">
+          <md-icon md-svg-icon="{{item.icon}}_24px" alt="Icon" class="md-avatar-icon {{item.background}}"></md-icon>
+          <p>{{item.title}}</p>
+          <md-tooltip>{{item.desc}}</md-tooltip>
+          <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-subheader class="md-no-sticky md-transparent">Credits</md-subheader>
+        <md-list-item class="md-2-line">
+          <md-icon md-svg-icon="action:ic_account_box_24px" alt="Icon" class="md-avatar"></md-icon>
+          <div class="md-list-item-text">
+            <h3>Kyle Ledbetter</h3>
+            <p>Creator</p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-card>
+  </div>
+</div>

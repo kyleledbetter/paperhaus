@@ -1,31 +1,33 @@
-<div layout-gt-sm="row" layout-align-gt-sm="center center" class="inset">
+<div layout-gt-sm="row" layout-align-gt-sm="center center">
   <div flex-gt-sm="60">
-    <md-card ng-repeat="item in tiles | orderBy: 'background'" class="md-whiteframe-z2 {{item.background}} tc-white">
-      <img ng-src="{{item.image}}" class="md-card-image" alt="Image" hide-gt-xs>
+    <div layout-gt-sm="column" layout-margin ng-repeat="item in tiles | orderBy: 'background'">
+      <md-card class="md-whiteframe-z2 {{item.background}} tc-white">
+        <img ng-src="{{item.image}}" class="md-card-image" alt="Image" hide-gt-xs>
 
-        <div layout-gt-xs="row" ng-click="showDetail($event, item)">
-          <div flex-gt-xs="70">
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">{{item.title}}</span>
-              </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-              <p>
-                {{item.desc}}
-              </p>
-            </md-card-content>
+          <div layout-gt-xs="row" ng-click="showDetail($event, item)">
+            <div flex-gt-xs="70">
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">{{item.title}}</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+                <p>
+                  {{item.desc}}
+                </p>
+              </md-card-content>
+            </div>
+            <div flex class="inset">
+              <img  ng-src="{{item.image}}" class="md-card-image" alt="Image" hide-xs width="100%">
+            </div>
           </div>
-          <div flex class="inset">
-            <img  ng-src="{{item.image}}" class="md-card-image" alt="Image" hide-xs width="100%">
+          <md-divider></md-divider>
+          <div layout="row" layout-align="start center" class="inset">
+            <md-button class="md-raised">View Live Demo</md-button>
+            <md-button ng-click="showDetail($event, item)" class="tc-white">View Details</md-button>
+            <md-button class="tc-white">Join Club</md-button>
           </div>
-        </div>
-        <md-divider></md-divider>
-        <div layout="row" layout-align="start center" class="inset">
-          <md-button class="md-raised">View Live Demo</md-button>
-          <md-button ng-click="showDetail($event, item)" class="tc-white">View Details</md-button>
-          <md-button class="tc-white">Join Club</md-button>
-        </div>
-      </md-card>
+        </md-card>
+    </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
     <div class="header-bg">
 
     </div>
-    <h1 class="md-display-1">Hand-crafted Material Design App Templates</h1>
+    <h1 class="md-display-1 md-header-title">Hand-crafted Material Design App Templates</h1>
     <h2 hide-xs class="md-headline">For AngularJS (ng-material) + Sketch App!</h2>
     <md-button class="md-raised md-accent"><span class="md-headline">Join Today!</span></md-button>
     <div layout="row">
@@ -64,22 +64,21 @@
     </md-grid-tile>
   </md-grid-list>
 </div>
-<div flex class="bg-1-row" layout-gt-xs="row" layout-align-gt-xs="center center">
-  <div flex-gt-xs="90" layout="row" layout-align="center stretch" layout-margin layout-padding>
+<div flex class="bg-1-row" layout-xs="column" layout-gt-xs="row" layout-align-gt-xs="center center">
+  <div flex-gt-xs="90" layout-xs="column" layout-gt-xs="row" layout-align="center stretch" layout-margin layout-padding>
     <div>
-      <h1 class="md-display-1">Hand Crafted Material Design</h1>
+      <h1 class="md-display-1">Hand-crafted Material Design Templates</h1>
       <h2 class="md-headline">Based on Atomic (Material) Design Principles</h2>
       <md-button class="md-raised md-accent">Join Today!</md-button>
-      <p class="md-body-1">You get an entire Angular-Material mock app each month!</p>
     </div>
-    <div class="bg-1" flex="60">
+    <div class="bg-1" flex-gt-xs="60" flex-xs="20">
 
     </div>
   </div>
 </div>
-<div id="anchor-club" flex class="bgc-deep-purple-700 tc-white" layout-gt-xs="row" layout-align-gt-xs="center center">
-  <div flex-gt-xs="90" layout="row" layout-align="center stretch" layout-margin layout-padding>
-    <div class="bg-1" flex="60">
+<div id="anchor-club" flex layout-xs="column" class="bgc-deep-purple-700 tc-white" layout-gt-xs="row" layout-align-gt-xs="center center">
+  <div flex-gt-xs="90" layout-xs="column" layout-gt-xs="row" layout-align="center stretch" layout-margin layout-padding>
+    <div class="bg-1" flex-gt-xs="60" flex-xs="20">
 
     </div>
     <div>
@@ -92,15 +91,15 @@
   </div>
 </div>
 <div id="anchor-pricing" flex class="bg-1-row" layout-gt-xs="row" layout-align-gt-xs="center center">
-  <div flex-gt-xs="90" layout="row" layout-align="center stretch" layout-margin layout-padding>
+  <div flex-gt-xs="60" layout="column" layout-align="center center" layout-margin layout-padding>
     <div>
       <h1 class="md-display-1">Pricing Details</h1>
-      <h2 class="md-headline">Based on Atomic (Material) Design Principles</h2>
-      <md-button class="md-raised md-accent">Join Today!</md-button>
-      <p class="md-body-1">You get an entire Angular-Material mock app each month!</p>
-    </div>
-    <div class="bg-1" flex="60">
-
+      <h2 class="md-headline">Extremely affordable membership options</h2>
+      <pricing></pricing>
+      <md-button ui-sref="membership">
+        <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="more"></md-icon>
+        View full details
+      </md-button>
     </div>
   </div>
 </div>
