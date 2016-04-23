@@ -1,4 +1,4 @@
-<html lang="en" ng-app="RadioActive">
+<html lang="en" ng-app="Paper">
   <head>
     <title>Paper Haus Material Design App Template Club</title>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css">
@@ -48,7 +48,7 @@
     </md-sidenav>
 
     <md-content flex layout="column" class="relative" role="main">
-      <md-toolbar class="md-whiteframe-z1 md-hue-2" md-scroll-shrink>
+      <md-toolbar class="md-whiteframe-z1 md-primary" md-scroll-shrink ng-class="{'md-hue-1': $state.is('dashboard'), 'md-primary': !$state.is('dashboard')}">
         <div class="md-toolbar-tools">
           <md-button class="md-icon-button" ng-click="toggleSidenav('left')" aria-label="Menu" hide-gt-lg ng-if="$state.is('dashboard')">
             <md-icon md-svg-icon="navigation:ic_menu_24px" aria-label="Menu"></md-icon>
@@ -61,7 +61,7 @@
             <span class="md-headline tc-deep-purple-700">PAPER</span>
             <span class="md-title tc-pink-700">.HAUS</span>
           </h3>
-          <h3 ng-if="!$state.is('dashboard')"><span class="md-headline tc-deep-purple-700">{{ $state.current.title }}</span></h3>
+          <h3 ng-if="!$state.is('dashboard')"><span class="md-headline">{{ $state.current.title }}</span></h3>
           <span flex></span>
           <span flex="10"></span>
           <md-button class="md-icon-button" aria-label="Search">
@@ -71,16 +71,14 @@
             <md-icon md-svg-icon="navigation:ic_more_vert_24px" aria-label="More"></md-icon>
           </md-button>
         </div>
-        <md-tabs class="md-hue-2" md-stretch-tabs="always" md-no-pagination>
+        <md-tabs ng-class="{'md-hue-1': $state.is('dashboard'), 'md-primary': !$state.is('dashboard')}" md-stretch-tabs="always" md-no-pagination>
           <md-tab ui-sref="{{item.state}}" ng-repeat="item in menu">{{item.title}}</md-tab>
         </md-tabs>
       </md-toolbar>
-      <md-content ui-view flex class="page-transition">
+      <md-content ui-view flex class="page-transition bgc-blue-grey-200">
 
       </md-content>
-      <footer>
 
-      </footer>
     </md-content>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
