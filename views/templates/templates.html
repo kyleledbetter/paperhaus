@@ -1,9 +1,9 @@
 <div layout-gt-sm="row" layout-align-gt-sm="center center" class="inset">
   <div flex-gt-sm="60">
-    <md-card ng-repeat="item in tiles">
+    <md-card ng-repeat="item in tiles | orderBy: 'background'" class="md-whiteframe-z2 {{item.background}} tc-white">
       <img ng-src="{{item.image}}" class="md-card-image" alt="Image" hide-gt-xs>
 
-        <div layout-gt-xs="row" ui-sref="template">
+        <div layout-gt-xs="row" ng-click="showDetail($event, item)">
           <div flex-gt-xs="70">
             <md-card-title>
               <md-card-title-text>
@@ -21,11 +21,11 @@
           </div>
         </div>
         <md-divider></md-divider>
-        <md-card-actions layout="row" layout-align="start center">
-          <md-button class="md-accent">View Live Demo</md-button>
-          <md-button>View Details</md-button>
-          <md-button>Join Club</md-button>
-        </md-card-actions>
+        <div layout="row" layout-align="start center" class="inset">
+          <md-button class="md-raised">View Live Demo</md-button>
+          <md-button ng-click="showDetail($event, item)" class="tc-white">View Details</md-button>
+          <md-button class="tc-white">Join Club</md-button>
+        </div>
       </md-card>
   </div>
 </div>
