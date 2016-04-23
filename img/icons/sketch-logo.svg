@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>sketch-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="105.5625%" x2="50%" y2="45.1085069%" id="linearGradient-1">
+            <stop stop-color="#FFF2C4" offset="0%"></stop>
+            <stop stop-color="#FF8028" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,54.5927098 L31.5619342,15.8116114 L68.8540517,0 L112,1.57684955e-06 L112,204 L0,54.5927098 Z M224,54.5927098 L192.438066,15.8116114 L155.145948,0 L112,1.57684955e-06 L112,204 L224,54.5927098 Z" id="path-2"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FDBD54" offset="0%"></stop>
+            <stop stop-color="#F56926" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F9B85B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="37.3210204%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFDC65" offset="0%"></stop>
+            <stop stop-color="#F56423" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sketch-logo">
+            <g id="Group" transform="translate(17.000000, 27.000000)">
+                <g id="Mask">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <path d="M112.125134,203.636442 L112.125134,204 L112,203.833088 L112.125134,203.636442 L112.125134,204 L224,54.7744416 L221.741801,52 L192.404268,77.4792894 L112.125134,203.636442 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                <path d="M0.0140770768,55 L0,55.0172478 L112,204 L112,203.195164 L31.9136273,78.0602374 L0.0140770768,55 Z" id="Combined-Shape" fill="url(#linearGradient-4)"></path>
+                <polygon id="Path-218" fill="url(#linearGradient-5)" points="31 78 193 78 163.017435 35 60.9705751 35"></polygon>
+                <polygon id="Path-214-Copy" fill="url(#linearGradient-6)" points="31.8876655 78 66 35.0459882 31.5442437 16 0 54.9174718"></polygon>
+                <polygon id="Path-214-Copy-3" fill="url(#linearGradient-6)" transform="translate(191.000000, 47.000000) scale(-1, 1) translate(-191.000000, -47.000000) " points="189.887665 78 224 35.0459882 189.544244 16 158 54.9174718"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

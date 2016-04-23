@@ -1,0 +1,17 @@
+/* Basic page transition */
+.page-transition.ng-enter, .page-transition.ng-leave {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: opacity ease-out 500ms;
+    transition: opacity ease-out 500ms;
+}
+.page-transition.ng-enter, .page-transition.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+/* hide toolbar when leaving */
+.page-transition.ng-leave.ng-leave-active md-toolbar {
+  display: none;
+}
+.page-transition.ng-enter.ng-enter-active {
+    opacity: 1;
+}

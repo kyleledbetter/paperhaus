@@ -1,0 +1,96 @@
+<html lang="en" ng-app="RadioActive">
+  <head>
+    <title>Paper Haus Material Design App Template Club</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/ico/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/ico/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/ico/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="img/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/ico/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="img/ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="img/ico/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/ico/manifest.json">
+    <link rel="mask-icon" href="img/ico/safari-pinned-tab.svg" color="#673AB7">
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#673AB7">
+    <meta name="msapplication-TileImage" content="/img/ico/mstile-144x144.png">
+    <meta name="msapplication-config" content="/img/ico/browserconfig.xml">
+    <meta name="theme-color" content="#673ab7">
+  </head>
+  <body layout="row" ng-controller="AppCtrl">
+    <md-sidenav md-theme="dark" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-lg')">
+      <md-toolbar class="md-hue-2">
+        <span flex></span>
+        <div layout="row" layout-align="start center">
+          <md-icon class="md-avatar" md-svg-icon="avatars:svg-2"></md-icon>
+          <span flex></span>
+        </div>
+        <span flex></span>
+        <div class="md-body-2">Firstname Lastname</div>
+        <div class="md-body-1">email@domainname.com</div>
+      </md-toolbar>
+      <md-list flex>
+        <md-list-item flex="auto" class="md-2-line" md-ink-ripple ui-sref="{{item.state}}" ng-repeat="item in menu" ui-sref-active="active" ng-click="toggleSidenav('left')">
+          <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
+          <div class="md-list-item-text">
+            <span class="md-body-2">{{item.title}}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-sidenav>
+
+    <md-content flex layout="column" class="relative" role="main">
+      <md-toolbar class="md-whiteframe-z1 md-hue-2" md-scroll-shrink>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" ng-click="toggleSidenav('left')" aria-label="Menu" hide-gt-lg ng-if="$state.is('dashboard')">
+            <md-icon md-svg-icon="navigation:ic_menu_24px" aria-label="Menu"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" back-button aria-label="Back" ng-show="!$state.is('dashboard')">
+            <md-icon md-svg-icon="navigation:ic_arrow_back_24px" aria-label="Back"></md-icon>
+          </md-button>
+          <md-icon flex="5" class="md-icon-logo" md-svg-src="img/paperhaus.svg" ng-if="$state.is('dashboard')"></md-icon>
+          <h3 ng-if="$state.is('dashboard')">
+            <span class="md-headline tc-deep-purple-700">PAPER</span>
+            <span class="md-title tc-pink-700">.HAUS</span>
+          </h3>
+          <h3 ng-if="!$state.is('dashboard')"><span class="md-headline tc-deep-purple-700">{{ $state.current.title }}</span></h3>
+          <span flex></span>
+          <span flex="10"></span>
+          <md-button class="md-icon-button" aria-label="Search">
+            <md-icon md-svg-icon="action:ic_search_24px" aria-label="Search"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
+            <md-icon md-svg-icon="navigation:ic_more_vert_24px" aria-label="More"></md-icon>
+          </md-button>
+        </div>
+        <md-tabs class="md-hue-2" md-stretch-tabs="always" md-no-pagination>
+          <md-tab ui-sref="{{item.state}}" ng-repeat="item in menu">{{item.title}}</md-tab>
+        </md-tabs>
+      </md-toolbar>
+      <md-content ui-view flex class="page-transition">
+
+      </md-content>
+      <footer>
+
+      </footer>
+    </md-content>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="components/footer/footer.js"></script>
+  </body>
+</html>

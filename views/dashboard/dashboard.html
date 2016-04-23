@@ -1,0 +1,106 @@
+<md-toolbar md-theme="dark" class="md-whiteframe-z1 md-toolbar-header">
+  <div layout="column" layout-align="center center" class="md-padding">
+    <div class="header-bg">
+
+    </div>
+    <h1 class="md-display-1">Hand-crafted Material Design App Templates</h1>
+    <h2 hide-xs class="md-headline">For AngularJS (ng-material) + Sketch App!</h2>
+    <md-button class="md-raised md-accent"><span class="md-headline">Join Today!</span></md-button>
+    <div layout="row">
+      <md-icon class="md-icon-lg" md-svg-src="img/icons/angular-logo.svg" flex="45">
+        <md-tooltip>Angular-Material</md-tooltip>
+      </md-icon>
+      <md-icon class="md-icon-lg" md-svg-src="img/icons/sketch-logo2.svg" flex="45">
+        <md-tooltip>Sketch for OSX</md-tooltip>
+      </md-icon>
+    </div>
+    <p class="md-body-1" hide-xs>You get an entire Angular-Material prototype app each month!</p>
+  </div>
+</md-toolbar>
+<md-toolbar md-theme="dark" class="md-hue-2 md-whiteframe-z1">
+
+  <md-fab-speed-dial ng-hide="demo.hidden" md-direction="down" md-open="demo.isOpen"
+                       class="md-scale md-fab-top-right md-hover-full"
+                       ng-mouseenter="demo.isOpen=true" ng-mouseleave="demo.isOpen=false">
+    <md-fab-trigger>
+      <md-button class="md-accent md-fab" ng-click="gotoAnchor('gallery')">
+        <md-tooltip md-direction="left">Gallery</md-tooltip>
+        <md-icon md-svg-icon="hardware:ic_keyboard_arrow_down_24px" aria-label="Menu"></md-icon>
+      </md-button>
+    </md-fab-trigger>
+    <md-fab-actions>
+      <md-button class="md-primary md-fab md-mini" ng-click="gotoAnchor('club')">
+        <md-tooltip md-direction="left">Club Info</md-tooltip>
+        <md-icon md-svg-icon="action:ic_store_24px" aria-label="Menu"></md-icon>
+      </md-button>
+      <md-button class="md-primary md-fab md-mini" ng-click="gotoAnchor('pricing')">
+        <md-tooltip md-direction="left">Pricing</md-tooltip>
+        <md-icon md-svg-icon="editor:ic_attach_money_24px" aria-label="Menu"></md-icon>
+      </md-button>
+    </md-fab-actions>
+  </md-fab-speed-dial>
+</md-toolbar>
+<div flex class="md-padding bgc-blue-grey-900">
+  <md-grid-list
+    id="anchor-gallery"
+    md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="6"
+    md-row-height="4:3"
+    md-gutter="8px" md-gutter-gt-sm="16px" >
+    <md-grid-tile ng-repeat="tile in tiles"
+      ng-click="showDetail($event, tile)"
+      md-rowspan-gt-xs="{{tile.rows}}"
+      md-colspan-gt-xs="{{tile.columns}}"
+      md-colspan-xs="1"
+      class="md-whiteframe-z2">
+      <img src="{{tile.image}}" width="100%" />
+      <md-grid-tile-footer ng-class="tile.background" class="md-padding md-whiteframe-z1">
+        <div class="md-grid-toolbar md-grid-toolbar-darken">
+          <h3 class="md-title">{{tile.title}}</h3>
+        </div>
+        <div ng-class="tile.background" class="md-grid-toolbar">
+          <p class="md-body-1">{{tile.desc}}</p>
+        </div>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+</div>
+<div flex class="bg-1-row" layout-gt-xs="row" layout-align-gt-xs="center center">
+  <div flex-gt-xs="90" layout="row" layout-align="center stretch" layout-margin layout-padding>
+    <div>
+      <h1 class="md-display-1">Hand Crafted Material Design</h1>
+      <h2 class="md-headline">Based on Atomic (Material) Design Principles</h2>
+      <md-button class="md-raised md-accent">Join Today!</md-button>
+      <p class="md-body-1">You get an entire Angular-Material mock app each month!</p>
+    </div>
+    <div class="bg-1" flex="60">
+
+    </div>
+  </div>
+</div>
+<div id="anchor-club" flex class="bgc-deep-purple-700 tc-white" layout-gt-xs="row" layout-align-gt-xs="center center">
+  <div flex-gt-xs="90" layout="row" layout-align="center stretch" layout-margin layout-padding>
+    <div class="bg-1" flex="60">
+
+    </div>
+    <div>
+      <h1 class="md-display-1">Paper.Haus Club Info</h1>
+      <h2 class="md-headline">Based on Atomic (Material) Design Principles</h2>
+      <md-button class="md-raised md-accent">Join Today!</md-button>
+      <p class="md-body-1">You get an entire Angular-Material mock app each month!</p>
+    </div>
+
+  </div>
+</div>
+<div id="anchor-pricing" flex class="bg-1-row" layout-gt-xs="row" layout-align-gt-xs="center center">
+  <div flex-gt-xs="90" layout="row" layout-align="center stretch" layout-margin layout-padding>
+    <div>
+      <h1 class="md-display-1">Pricing Details</h1>
+      <h2 class="md-headline">Based on Atomic (Material) Design Principles</h2>
+      <md-button class="md-raised md-accent">Join Today!</md-button>
+      <p class="md-body-1">You get an entire Angular-Material mock app each month!</p>
+    </div>
+    <div class="bg-1" flex="60">
+
+    </div>
+  </div>
+</div>

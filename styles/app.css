@@ -1,0 +1,305 @@
+body {
+  background-color: #ddd;
+}
+h1, h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.md-toolbar-header {
+  background-image:url('../img/toolbar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header-bg {
+  background-image:url('../img/header.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
+  width: 100%;
+  margin-top: 5%;
+}
+.bg-1-row {
+  background-color: #FFFFFF;
+}
+.bg-1 {
+  background-image:url('../img/bg-1.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.md-icon-logo {
+  height: 32px;
+  width: 32px;
+}
+.md-icon-lg {
+  height: 200px;
+  width: 200px;
+  max-height: 200px !important;
+}
+[ng-click]:hover,
+[ui-sref]:hover {
+  cursor: pointer;
+}
+md-card,
+md-card.md-dialog-theme {
+  background-color: #fff;
+}
+/* Colors */
+md-chips .md-chip.md-primary,
+md-chips .md-chip.md-accent,
+md-chips .md-chip.md-hue-2,
+md-chips .md-chip.md-hue-3 {
+  color: rgba(255,255,255,0.87);
+}
+md-chips .md-chip.md-primary {
+  background-color: rgb(21,101,192);
+}
+md-chips .md-chip.md-accent {
+  background-color: rgb(255,152,0);
+}
+md-chips .md-chip.md-hue-2 {
+  background-color: rgb(13,71,161);
+}
+md-chips .md-chip.md-hue-3 {
+  background-color: rgb(130,177,255);
+}
+md-chips.md-chips-noborder .md-chips {
+  box-shadow: none;
+}
+
+md-toolbar + md-content[class*="theme"] {
+  background-color: #eee;
+}
+
+md-sidenav.md-sidenav-left > md-toolbar {
+  padding: 15px;
+  height: 150px;
+  min-height: 150px;
+}
+md-sidenav md-list-item.md-2-line, md-list-item.md-2-line>.md-no-style {
+  min-height: 0;
+}
+md-sidenav md-list-item.md-2-line .md-list-item-text {
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+md-sidenav md-list-item.md-2-line md-icon:first-child {
+  margin-top: 10px;
+}
+md-sidenav md-divider {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+md-sidenav md-icon {
+  position: relative;
+  margin-left: 0;
+}
+
+md-sidenav.md-sidenav-left .md-avatar {
+  height: 64px;
+  width: 64px;
+}
+md-sidenav.md-sidenav-right img {
+  height: 200px;
+  width: 100%;
+}
+
+md-sidenav .active,
+md-sidenav .active md-icon {
+  color: #F50057;
+  fill: #F50057;
+}
+md-sidenav.md-sidenav-right {
+  max-width: 100%;
+  width: 100%;
+}
+/* More closely matches https://www.google.com/design/spec/components/lists.html#lists-specs */
+md-list-item.md-2-line md-divider[md-inset],
+md-list-item.md-3-line md-divider[md-inset] {
+  left: 70px;
+}
+
+.md-avatar > svg {
+  border-radius: 50%;
+}
+md-content .md-avatar > svg {
+  height: 40px;
+  width: 40px;
+}
+
+/* fade animation */
+.animate-show {
+  transition: 0.75s ease-out opacity;
+  opacity: 1;
+}
+
+.animate-show.ng-hide {
+  height: 0;
+  min-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+md-icon.md-headline {
+  padding-top: 10px;
+}
+
+.logo-row {
+  height: 22px;
+}
+.logo {
+  overflow:hidden;
+  width:100px;
+  height:22px;
+  display: inline-block;
+  position: relative;
+}
+md-toolbar .logo {
+  top: -2px;
+}
+md-sidenav md-toolbar .logo {
+  top: -4px;
+}
+.logo-accent {
+  fill: #FFA726;
+}
+.logo-primary {
+  fill: #FFFFFF;
+}
+/* Icon in an href button */
+a.md-fab.md-button:not(.md-mini) md-icon {
+  margin-top: 16px;
+}
+a.md-fab.md-button.md-mini md-icon {
+  margin-top: 7px;
+}
+
+/* Speed dial placement like regular fab */
+md-fab-speed-dial.md-fab-bottom-right {
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+  z-index: 20;
+}
+
+/* Tabs */
+md-tabs.md-hue-1 .md-tab.md-active, md-tabs.md-hue-1 .md-tab.md-focused {
+  color: rgba(0,0,0, 0.8);
+}
+md-toolbar > md-tabs.md-default-theme.md-hue-2 > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]), md-toolbar > md-tabs.md-hue-2 > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
+  color: rgba(0,0,0, 0.8);
+}
+
+/* Autocomplete */
+.md-autocomplete--code {
+  width:110px;
+  display:inline-block;
+}
+.md-autocomplete--code md-autocomplete,
+.md-autocomplete--code md-autocomplete md-autocomplete-wrap {
+  box-shadow: none;
+  height: 17px;
+  background: transparent;
+  width: 110px !important;
+}
+.md-autocomplete--code md-autocomplete input:not(.md-input) {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1;
+  height: 17px;
+  color: rgb(245, 124, 0);
+  font-family: monospace;
+}
+.md-autocomplete--code md-autocomplete button {
+  height: 18px;
+  width: 18px;
+}
+.md-autocomplete--code md-autocomplete button md-icon {
+  height: 16px;
+  width: 16px;
+}
+
+/* Tabs */
+md-tabs.md-default-theme md-ink-bar, md-tabs.md-default-theme.md-hue-1 md-ink-bar {
+  color: #1565C0;
+  background: #1565C0;
+}
+
+md-card-actions {
+  margin: 4px 4px 4px 4px !important;
+  padding: 0 !important;
+  color: gray;
+  fill: gray;
+}
+md-card-actions md-icon {
+  height: 16px;
+  width: 16px;
+  color: gray;
+  fill: gray;
+}
+
+/* dialog */
+md-dialog {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+md-datepicker[class*="theme"] {
+  background: none;
+}
+
+md-checkbox.md-checked + .md-list-item-text > h3 {
+  text-decoration: line-through;
+}
+
+
+/* Grid List */
+
+md-grid-list md-icon {
+  width: 50%;
+  height: 30%; }
+md-grid-list md-icon svg {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+md-grid-list .s64 {
+  font-size: 64px; }
+md-grid-list .s32 {
+  font-size: 48px; }
+md-grid-list md-icon.fa {
+  display: block;
+  padding-left: 0; }
+md-grid-list md-icon.s32 span {
+  padding-left: 8px; }
+md-grid-list md-grid-list {
+  margin: 8px; }
+md-grid-list md-grid-tile {
+  transition: all 300ms ease-out 50ms; }
+md-grid-list md-grid-tile md-icon {
+  padding-bottom: 32px; }
+md-grid-list md-grid-tile md-grid-tile-footer {
+  background: rgba(0, 0, 0, 0.68);
+  bottom: -1px;
+  height: auto; }
+md-grid-list md-grid-tile-footer figcaption {
+  width: 100%; }
+.md-grid-toolbar h3 {
+  margin: 0;
+}
+.md-grid-toolbar p {
+  margin: 0;
+}

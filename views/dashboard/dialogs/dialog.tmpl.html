@@ -1,0 +1,141 @@
+<md-dialog md-theme="dialog" aria-label="App" class="md-dialog-lg">
+  <md-toolbar class="{{tile.background}}">
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" ng-click="cancel()" aria-label="back">
+        <md-icon md-svg-icon="navigation:ic_arrow_back_24px" alt="Back" style="fill:white"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+   <md-content flex>
+     <md-toolbar class="md-tall {{tile.background}} tc-white"  style="z-index:0;padding-bottom: 180px">
+       <div layout-gt-xs="row" layout-align-gt-xs="center center">
+         <div flex-gt-xs="70">
+           <div class="md-display-1">{{tile.title}}</div>
+           <div class="md-subhead push-bottom">{{tile.desc}}</div>
+         </div>
+       </div>
+       <md-button class="md-fab md-fab md-accent md-fab-bottom-right md-whiteframe-z2 pull-bottom-sm" ui-sref="app-create" ng-click="controller.cancel()">
+         <md-icon md-svg-icon="action:ic_add_shopping_cart_24px" alt="Icon"></md-icon>
+         <md-tooltip md-direction="left">Install App</md-tooltip>
+       </md-button>
+     </md-toolbar>
+     <div layout-gt-xs="row" layout-align-gt-xs="center center" style="margin-top: -80px;z-index:1;position:relative">
+       <div flex-gt-xs="70">
+         <md-card>
+           <md-card-content>
+             <img src="{{tile.image}}" width="100%"/>
+           </md-card-content>
+           <md-divider></md-divider>
+           <div layout="row" layout-align="start center" class="inset">
+             <md-button class="md-raised md-accent" ui-sref="app-create" ng-click="controller.cancel()">View Live Demo</md-button>
+             <md-button class="md-raised">Join Club</md-button>
+           </div>
+         </md-card>
+         <div>
+           <div layout-gt-sm="row">
+             <div flex-gt-sm="65">
+               <md-card>
+                 <md-card-header>
+                  <md-card-header-text>
+                  <span class="md-title">Forum Design Patterns</span>
+                  </md-card-header-text>
+                  </md-card-header>
+                  <md-divider></md-divider>
+                 <md-card-content>
+                   <h4 class="md-title" id="dashboard">Dashboard</h4>
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   </p>
+                   <md-divider></md-divider>
+                   <h4 class="md-title" id="list">Forum Discussion List</h4>
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   </p>
+                   <md-divider></md-divider>
+                   <h4 class="md-title" id="detail">Single Discussion</h4>
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   </p>
+                   <md-divider></md-divider>
+                   <h4 class="md-title" id="team">Team View</h4>
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   </p>
+                   <md-divider></md-divider>
+                   <h4 class="md-title" id="user">User Detail</h4>
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   </p>
+                   <md-divider></md-divider>
+                   <h4 class="md-title" id="settings">Settings</h4>
+                   <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   </p>
+                 </md-card-content>
+               </md-card>
+             </div>
+             <div flex-gt-sm="35">
+               <md-card>
+                 <md-list>
+                   <md-subheader class="md-no-sticky md-transparent">Views Included</md-subheader>
+                   <md-list-item class="md-2-line">
+                     <md-icon md-svg-icon="file:ic_folder_open_24px" alt="Icon" class="md-avatar"></md-icon>
+                     <div class="md-list-item-text">
+                       <h3>All Forums</h3>
+                       <p>Dashboard</p>
+                     </div>
+                   </md-list-item>
+                   <md-list-item class="md-2-line">
+                     <md-icon md-svg-icon="action:ic_today_24px" alt="Icon" class="md-avatar"></md-icon>
+                     <div class="md-list-item-text">
+                       <h3>Forum Discussion List</h3>
+                       <p>List View</p>
+                     </div>
+                   </md-list-item>
+                   <md-list-item class="md-2-line">
+                     <md-icon md-svg-icon="action:ic_account_box_24px" alt="Icon" class="md-avatar"></md-icon>
+                     <div class="md-list-item-text">
+                       <h3>Single Discussion</h3>
+                       <p>Detail View</p>
+                     </div>
+                   </md-list-item>
+                   <md-list-item class="md-2-line">
+                     <md-icon md-svg-icon="action:ic_account_box_24px" alt="Icon" class="md-avatar"></md-icon>
+                     <div class="md-list-item-text">
+                       <h3>Team</h3>
+                       <p>Group List</p>
+                     </div>
+                   </md-list-item>
+                   <md-list-item class="md-2-line">
+                     <md-icon md-svg-icon="action:ic_account_box_24px" alt="Icon" class="md-avatar"></md-icon>
+                     <div class="md-list-item-text">
+                       <h3>Users</h3>
+                       <p>User List</p>
+                     </div>
+                   </md-list-item>
+                   <md-list-item class="md-2-line">
+                     <md-icon md-svg-icon="action:ic_account_box_24px" alt="Icon" class="md-avatar"></md-icon>
+                     <div class="md-list-item-text">
+                       <h3>Settings</h3>
+                       <p>Example Configuration</p>
+                     </div>
+                   </md-list-item>
+                   <md-divider></md-divider>
+                   <md-subheader class="md-no-sticky md-transparent">Credits</md-subheader>
+                   <md-list-item class="md-2-line">
+                     <md-icon md-svg-icon="action:ic_account_box_24px" alt="Icon" class="md-avatar"></md-icon>
+                     <div class="md-list-item-text">
+                       <h3>Kyle Ledbetter</h3>
+                       <p>Creator</p>
+                     </div>
+                   </md-list-item>
+                 </md-list>
+               </md-card>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+  </md-content>
+</md-dialog>

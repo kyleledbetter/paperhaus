@@ -1,0 +1,31 @@
+<div layout-gt-sm="row" layout-align-gt-sm="center center" class="inset">
+  <div flex-gt-sm="60">
+    <md-card ng-repeat="item in tiles">
+      <img ng-src="{{item.image}}" class="md-card-image" alt="Image" hide-gt-xs>
+
+        <div layout-gt-xs="row" ui-sref="template">
+          <div flex-gt-xs="70">
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">{{item.title}}</span>
+              </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+              <p>
+                {{item.desc}}
+              </p>
+            </md-card-content>
+          </div>
+          <div flex class="inset">
+            <img  ng-src="{{item.image}}" class="md-card-image" alt="Image" hide-xs width="100%">
+          </div>
+        </div>
+        <md-divider></md-divider>
+        <md-card-actions layout="row" layout-align="start center">
+          <md-button class="md-accent">View Live Demo</md-button>
+          <md-button>View Details</md-button>
+          <md-button>Join Club</md-button>
+        </md-card-actions>
+      </md-card>
+  </div>
+</div>

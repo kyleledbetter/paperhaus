@@ -1,0 +1,201 @@
+
+
+<md-content flex>
+  <md-toolbar>
+    <div layout="row" layout-align="center center" class="push-left push-right">
+      <div flex-gt-sm="90" flex-gt-md="65">
+        <h3 class="md-headline push-bottom-sm">1500e11H</h3>
+        <div layout layout-align="start end">
+          <span class="md-headline push-right-sm">99.23%</span>
+          <span class="md-subhead">DBC Disk Space critical</span>
+          <span flex></span>
+          <span class="md-caption">updated 1 minute ago</span>
+        </div>
+      </div>
+    </div>
+    <div class="push-bottom-xxl">
+    </div>
+  </md-toolbar>
+  <div layout="column" layout-fill layout-padding style="margin-top:-93px;z-index:3;position:relative;">
+    <div class="inset" hide-sm></div>
+    <div layout="row" layout-align="center center">
+      <div flex-gt-sm="90" flex-gt-md="65">
+        <md-card>
+          <md-tabs class="md-hue-1" md-selected="tabs.selectedIndex" md-stretch-tabs="always"  md-no-pagination ng-init="tabs.selectedIndex = 3" md-border-bottom>
+            <md-tab id="tab1" aria-controls="tab1-content">
+              1 Hour
+            </md-tab>
+            <md-tab id="tab2" aria-controls="tab2-content">
+              1 Day
+            </md-tab>
+            <md-tab id="tab3" aria-controls="tab3-content">
+              1 Week
+            </md-tab>
+            <md-tab id="tab4" aria-controls="tab4-content">
+              1 Month
+            </md-tab>
+            <md-tab id="tab5" aria-controls="tab5-content">
+              1 Year
+            </md-tab>
+          </md-tabs>
+          <md-card-content>
+            <c3chart bindto-id="chartheader" padding-right="10" padding-left="30">
+              <chart-size chart-height="250" />
+              <chart-column column-id="x"
+                column-values="9/30, 10/1, 10/2, 10/3, 10/4, 10/5, 10/6, 10/7, 10/8, 10/9, 10/10, 10/11, 10/12, 10/13, 10/14, 10/15"/>
+              <chart-column column-id="data1"
+                column-values="0.2,0.1,0.3,0.2,0.5,0.4,0.4,0.1,0.2,0.1,0.6,0.1,0.4,0.1,0.2,0.1,0.6,0.1,0.2,0.1,0.3,0.2,0.5,0.4"
+                column-name="DBC Disk Space"
+                column-color="#F57C00"
+                column-type="spline"/>
+                <chart-grid show-x="false" show-y="true">
+                </chart-grid>
+                <chart-axes values-x="x" y="data1,data2"/>
+                <chart-axis>
+                  <chart-axis-x axis-position="outer-center"
+                      axis-label=""
+                      padding-left="0"
+                      padding-right="0"
+                      axis-type="category">
+                      <chart-axis-x-tick tick-count="6"
+                       tick-culling="4"
+                       tick-fit="false" />
+                  </chart-axis-x>
+
+                </chart-axis>
+            </c3chart>
+          </md-card-content>
+        </md-card>
+
+        <md-card>
+          <md-card-header>
+            <div class="md-title">Health metrics</div>
+            <div class="md-subhead">for this system</div>
+          </md-card-header>
+          <md-divider></md-divider>
+          <md-list>
+            <div ng-repeat="item in health | filter:search">
+              <md-list-item class="md-3-line">
+                <div class="md-list-item-text">
+                  <div layout layout-align="start center">
+                    <div flex="75">
+                      <c3chart bindto-id="chart{{$index}}" padding-left="30" padding-right="10">
+                        <chart-legend show-legend="false" legend-position="right"/>
+                        <chart-size chart-height="110" />
+                        <chart-column column-id="bar1"
+                          column-name="Metric"
+                          column-color="{{item.color}}"
+                          column-values="30,80,50,75,65,95,30,80,50,75,65,95,30,80,50,75,65,95"
+                          column-type="bar"/>
+                      </c3chart>
+                    </div>
+                    <div>
+                      <h3 class="md-headline">{{item.title}}</h3>
+                      <div class="md-title text-{{item.health}}">{{item.value}}</div>
+                    </div>
+                  </div>
+                </div>
+                <md-divider ng-if="!$last"></md-divider>
+              </md-list-item>
+            </div>
+          </md-list>
+          <md-divider></md-divider>
+          <div class="md-actions" layout="row" layout-align="start center">
+            <md-button class="md-primary">
+              <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="Forward"></md-icon>
+              <span>More</span>
+            </md-button>
+            <span flex></span>
+            <span style="display:none" class="md-caption">from</span>
+            <md-button style="display:none" ui-sref="dashboard">Radioactive HUB</md-button>
+          </div>
+        </md-card>
+        <md-card>
+          <md-card-header>
+            <div class="md-title">Related apps</div>
+            <div class="md-subhead">from Radioactive AppCenter</div>
+          </md-card-header>
+          <md-divider></md-divider>
+          <md-list>
+            <a href="https://github.td.Radioactive.com/pages/KL186023/uda-appcenter/#/sources/8f3c49a2-3e5a-47cf-980e-38f218db4e4d" ng-repeat="item in apps | filter:search | limitTo:3">
+              <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                <md-icon hide-sm md-svg-icon="av:ic_web_24px"></md-icon>
+                <div class="md-list-item-text">
+                  <div layout="row" layout-align="space-between center" flex>
+                    <span flex="40" flex-gt-sm="60">
+                      <h3>{{item.query}}</h3>
+                      <div class="text-sm text-muted">{{item.date}}</div>
+                    </span>
+                    <span flex="20" flex-gt-sm="30">
+                      <div class="text-primary text-truncate">{{item.memory}}</div>
+                      <div class="text-sm text-muted">Memory</div>
+                    </span>
+                    <span flex="20" hide-gt-sm>
+                      <div class="text-muted text-truncate">{{item.cpus}}</div>
+                      <div class="text-sm text-muted">CPUs</div>
+                    </span>
+                    <span flex="20" hide-gt-sm>
+                      <div class="text-muted text-truncate">{{item.instances}}</div>
+                      <div class="text-sm text-muted">Instances</div>
+                    </span>
+                  </div>
+                </div>
+                <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+              </md-list-item>
+            </a>
+          </md-list>
+          <md-divider></md-divider>
+          <div class="md-actions" layout="row" layout-align="start center">
+            <md-button class="md-primary">
+              <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="Forward"></md-icon>
+              <span>More</span>
+            </md-button>
+          </div>
+        </md-card>
+        <md-card>
+          <md-card-header>
+            <div class="md-title">Related streaming data sources</div>
+            <div class="md-subhead">from Radioactive Listener</div>
+          </md-card-header>
+          <md-divider></md-divider>
+          <md-list>
+            <a href="https://listener-web-dev.uda.Radioactive.com/sources/a24ec240-9e97-41df-a33d-333fd49bf02d" ng-repeat="item in sources | filter:search | limitTo:3">
+              <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                <md-icon hide-sm md-svg-icon="action:ic_settings_input_antenna_24px"></md-icon>
+                <div class="md-list-item-text">
+                  <div layout="row" layout-align="space-between center" flex>
+                    <span flex="60">
+                      <h3>{{item.query}}</h3>
+                      <div class="text-sm text-muted">{{item.date}}</div>
+                    </span>
+                    <span flex="20">
+                      <div class="text-accent text-truncate">{{item.records}}</div>
+                      <div class="text-sm text-muted">Records</div>
+                    </span>
+                    <span flex="20" hide-gt-sm>
+                      <div class="text-muted text-truncate">{{item.size}}</div>
+                      <div class="text-sm text-muted">Size</div>
+                    </span>
+                  </div>
+                </div>
+                <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+              </md-list-item>
+            </a>
+          </md-list>
+          <md-divider></md-divider>
+          <div class="md-actions" layout="row" layout-align="start center">
+            <md-button class="md-primary">
+              <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="Forward"></md-icon>
+              <span>More</span>
+            </md-button>
+            <span flex></span>
+            <span style="display:none" class="md-caption">from</span>
+            <md-button style="display:none" href="https://listener-web-dev.uda.Radioactive.com/">Radioactive Listener</md-button>
+          </div>
+        </md-card>
+      </div>
+    </div>
+  </div>
+</md-content>

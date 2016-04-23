@@ -1,0 +1,232 @@
+<md-content flex>
+  <div layout="column" layout-fill layout-padding>
+    <div class="inset" hide-sm></div>
+    <div layout="row" layout-align="center center">
+      <div flex-gt-sm="90" flex-gt-md="80">
+        <md-card>
+          <md-toolbar class="md-primary">
+            <div layout="column" layout-padding layout-margin layout-align="center center">
+              <md-icon hide-sm md-svg-icon="avatars:svg-6" class="md-avatar" style="width:200px;height:200px;"></md-icon>
+            </div>
+          </md-toolbar>
+          <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+              <div layout="column" class="pad-left-xl">
+                <h3 class="md-title pad-top-sm">Bella Tonelli</h3>
+                <p class="md-subhead push-top-none">Data scientist – Business Analytics COE</p>
+              </div>
+            </div>
+          </md-toolbar>
+          <md-list>
+            <md-list-item class="md-3-line">
+              <md-icon md-svg-icon="action:ic_description_24px" aria-label="label"></md-icon>
+              <div class="md-list-item-text">
+                <h3>Biography</h3>
+                <p>I'm a data scientist with a PhD in Organizational Behavior from the Stanford Graduate School of business and a MS in Statistics from Standard University.  I design and implement analytics on human behavior over social networks.  I distill insights and evidence from a variety of data sources to guild strategic decision making.</p>
+
+              </div>
+              <md-divider md-inset></md-divider>
+            </md-list-item>
+            <md-list-item class="md-3-line">
+              <md-icon md-svg-icon="action:ic_label_24px" aria-label="label"></md-icon>
+              <div class="md-list-item-text">
+                <h3>Specialties</h3>
+                <md-chips>
+                  <md-chip>Python</md-chip>
+                  <md-chip>R scripts</md-chip>
+                  <md-chip>machine learning</md-chip>
+                  <md-chip>Radioactive IDW</md-chip>
+                  <md-chip>Aster Analytics</md-chip>
+                  <md-chip>Hadoop</md-chip>
+                </md-chips>
+              </div>
+            </md-list-item>
+            <md-list-item class="md-3-line">
+              <md-icon md-svg-icon="action:ic_description_24px" aria-label="label"></md-icon>
+              <div class="md-list-item-text">
+                <h3>Stats</h3>
+                <p layout="row" layout-align="space-around center">
+                  <span>21 questions</span>
+                  <span>194 upvotes</span>
+                  <span>1834 profile views</span>
+                  <span>12 data streams</span>
+                  <span>2 app engines</span>
+                </p>
+              </div>
+            </md-list-item>
+          </md-list>
+          <md-divider></md-divider>
+          <div class="md-actions inset" layout="row" layout-align="start center">
+            <span flex="5"></span>
+            <md-button class="md-raised" ng-click="showReply($event)">
+              <md-icon md-svg-icon="content:ic_mail_24px" aria-label="label"></md-icon>
+              Contact
+            </md-button>
+            <span flex></span>
+            <md-button class="md-raised">
+              <md-icon md-svg-icon="social:ic_share_24px" aria-label="label"></md-icon>
+            </md-button>
+            <md-button class="md-raised">
+              <md-icon md-svg-icon="social:ic_plus_one_24px" aria-label="label"></md-icon>
+            </md-button>
+          </div>
+        </md-card>
+        <div layout-gt-sm="row" class="push-top">
+          <span flex="5" hide-sm></span>
+          <div layout-gt-md="row" layout-wrap>
+            <div flex-gt-sm="50">
+              <md-card>
+                <md-card-header>
+                  <div class="md-title">Achievements</div>
+                  <div class="md-subhead">this user has earned</div>
+                </md-card-header>
+                <md-divider></md-divider>
+                <md-list>
+                  <div>
+                    <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                      <md-icon class="md-accent" md-svg-icon="action:ic_verified_user_24px"></md-icon>
+                      <div class="md-list-item-text">
+                        <h3>Radioactive Boss</h3>
+                        <div class="text-sm text-muted">34 replies on <em>Radioactive</em></div>
+                      </div>
+                      <md-divider md-inset hide-sm></md-divider>
+                      <md-divider hide-gt-sm></md-divider>
+                    </md-list-item>
+                  </div>
+                  <div>
+                    <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                      <md-icon class="md-hue-3" md-svg-icon="social:ic_whatshot_24px"></md-icon>
+                      <div class="md-list-item-text">
+                        <h3>Hip Hop Hadoop</h3>
+                        <div class="text-sm text-muted">29 replies on <em>Hadoop</em></div>
+                      </div>
+                      <md-divider md-inset hide-sm></md-divider>
+                      <md-divider hide-gt-sm></md-divider>
+                    </md-list-item>
+                  </div>
+                  <div>
+                    <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                      <md-icon class="md-warn" md-svg-icon="av:ic_hearing_24px"></md-icon>
+                      <div class="md-list-item-text">
+                        <h3>Listener Love</h3>
+                        <div class="text-sm text-muted">25 replies on <em>Listener</em></div>
+                      </div>
+                    </md-list-item>
+                  </div>
+                </md-list>
+                <md-divider></md-divider>
+                <div class="md-actions" layout="row" layout-align="start center">
+                  <md-button class="md-primary">
+                    <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="Forward"></md-icon>
+                    <span>More</span>
+                  </md-button>
+                  <span flex></span>
+                  <span class="md-caption">from</span>
+                  <md-button>Radioactive HUB</md-button>
+                </div>
+              </md-card>
+            </div>
+            <div flex-gt-sm="50">
+              <md-card>
+                <md-card-header>
+                  <div class="md-title">Popular Questions &amp; Answers</div>
+                  <div class="md-subhead">most conversation activity</div>
+                </md-card-header>
+                <md-divider></md-divider>
+                <md-list>
+                  <div ui-sref="question" ng-repeat="item in answers | filter:search | limitTo:3">
+                    <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                      <md-icon hide-sm md-svg-icon="avatars:svg-6" class="md-avatar"></md-icon>
+                      <div class="md-list-item-text">
+                        <h3>{{item.query}}</h3>
+                        <div class="text-sm text-muted">{{item.date}}</div>
+                      </div>
+
+                      <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                      <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+                    </md-list-item>
+                  </div>
+                </md-list>
+                <md-divider></md-divider>
+                <div class="md-actions" layout="row" layout-align="start center">
+                  <md-button class="md-primary">
+                    <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="Forward"></md-icon>
+                    <span>More</span>
+                  </md-button>
+                  <span flex></span>
+                  <span class="md-caption">from</span>
+                  <md-button>Radioactive Answers</md-button>
+                </div>
+              </md-card>
+            </div>
+            <div flex-gt-sm="50">
+              <md-card>
+                <md-card-header>
+                  <div class="md-title">Popular Data App Engines</div>
+                  <div class="md-subhead">app engines powering your query</div>
+                </md-card-header>
+                <md-divider></md-divider>
+                <md-list>
+                  <a href="http://10.25.59.25:32808/#/sources/8f3c49a2-3e5a-47cf-980e-38f218db4e4d" ng-repeat="item in apps | filter:search | limitTo:3">
+                    <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                      <md-icon hide-sm md-svg-icon="av:ic_web_24px"></md-icon>
+                      <div class="md-list-item-text">
+                        <h3>{{item.query}}</h3>
+                        <div class="text-sm text-muted">{{item.date}}</div>
+                      </div>
+                      <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                      <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+                    </md-list-item>
+                  </a>
+                </md-list>
+                <md-divider></md-divider>
+                <div class="md-actions" layout="row" layout-align="start center">
+                  <md-button class="md-primary">
+                    <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="Forward"></md-icon>
+                    <span>More</span>
+                  </md-button>
+                  <span flex></span>
+                  <span class="md-caption">from</span>
+                  <md-button>Radioactive AppCenter</md-button>
+                </div>
+              </md-card>
+            </div>
+            <div flex-gt-sm="50">
+              <md-card>
+                <md-card-header>
+                  <div class="md-title">Popular Streaming Data Sources</div>
+                  <div class="md-subhead">data feeding this query</div>
+                </md-card-header>
+                <md-divider></md-divider>
+                <md-list>
+                  <a href="https://listener-web-dev.uda.Radioactive.com/sources/a24ec240-9e97-41df-a33d-333fd49bf02d" ng-repeat="item in sources | filter:search | limitTo:3">
+                    <md-list-item class="md-3-line" md-ink-ripple="#2196F3">
+                      <md-icon hide-sm md-svg-icon="action:ic_settings_input_antenna_24px"></md-icon>
+                      <div class="md-list-item-text">
+                        <h3>{{item.query}}</h3>
+                        <div class="text-sm text-muted">{{item.date}}</div>
+                      </div>
+                      <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                      <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+                    </md-list-item>
+                  </a>
+                </md-list>
+                <md-divider></md-divider>
+                <div class="md-actions" layout="row" layout-align="start center">
+                  <md-button class="md-primary">
+                    <md-icon md-svg-icon="navigation:ic_arrow_forward_24px" aria-label="Forward"></md-icon>
+                    <span>More</span>
+                  </md-button>
+                  <span flex></span>
+                  <span class="md-caption">from</span>
+                  <md-button>Radioactive Listener</md-button>
+                </div>
+              </md-card>
+            </div>
+          </div>
+          <span flex="5" hide-sm></span>
+        </div>
+
+      </div>
+    </div>
+</md-content>
